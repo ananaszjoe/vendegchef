@@ -6,6 +6,6 @@ workers_dev = true
 preview_urls = false
 
 [vars]
-ALLOWED_ORIGIN = "https://ananaszjoe.github.io"
+ALLOWED_ORIGIN = "https://vendegchef.netlify.app"
 AIRTABLE_BASE_ID = "appxDcaBjWZrzhO1G"
 AIRTABLE_TABLE_ID = "tblhbyuGJEzW3nFCv"

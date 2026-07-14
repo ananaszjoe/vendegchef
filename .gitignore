@@ -1,3 +1,9 @@
 .DS_Store
 .dev.vars
 .wrangler/
+
+# Generated static site
+dist/
+
+# Local Netlify folder
+.netlify

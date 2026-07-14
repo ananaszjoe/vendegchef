@@ -10,13 +10,18 @@ python3 -m http.server 4173
 
 Then open <http://localhost:4173>.
 
-## Publish on GitHub Pages
+## Publish on Netlify
 
-1. Push `main` to GitHub.
-2. Open **Settings → Pages** in the repository.
-3. Under **Build and deployment**, choose **GitHub Actions** as the source.
+The repository is linked to the `vendegchef` Netlify project. The production URL is <https://vendegchef.netlify.app>.
 
-The included workflow deploys the site on every push to `main`.
+To create a production deployment from the linked local project:
+
+```bash
+nvm use
+npx netlify-cli deploy --build --prod
+```
+
+Netlify runs `scripts/build-site.mjs` and publishes only the four browser assets in `dist/`.
 
 ## Airtable table schema
 
@@ -51,7 +56,7 @@ Create these fields exactly as written:
 
 Do not put an Airtable Personal Access Token in frontend code. GitHub Pages is public, so the repository includes a Cloudflare Worker relay in `airtable-relay/`.
 
-1. Update `AIRTABLE_BASE_ID`, `AIRTABLE_TABLE_ID`, and `ALLOWED_ORIGIN` in `airtable-relay/wrangler.toml`.
+1. Update `AIRTABLE_BASE_ID`, `AIRTABLE_TABLE_ID`, and `ALLOWED_ORIGIN` in `airtable-relay/wrangler.toml` if the deployment changes.
 2. Create an Airtable Personal Access Token with `data.records:write` access limited to this base.
 3. From `airtable-relay/`, deploy the Worker:
 
