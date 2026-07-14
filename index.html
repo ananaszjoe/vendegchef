@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Heti egyszeri, minőségi ebéd valódi alapanyagokból, pontos tápértékekkel. Segíts megtervezni az első Vendég Chef menüt."
+    />
+    <meta name="theme-color" content="#f4efe5" />
+    <title>Vendég Chef — Ebéd, aminek minden összetevője számít</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2317372f'/%3E%3Cpath d='M18 39h28M22 39v4c0 4 3 7 7 7h6c4 0 7-3 7-7v-4M22 37c3-12 17-12 20 0M32 24V13M26 18l-4-6M38 18l4-6' fill='none' stroke='%23dbe97a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./config.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Vendég Chef kezdőlap">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path d="M14 30c2.5-9 17.5-9 20 0" />
+            <path d="M11 31h26" />
+            <path d="M16 31v3c0 3 2 5 5 5h6c3 0 5-2 5-5v-3" />
+            <path d="M20 20c-1.5-4 .5-7 4-9 3.5 2 5.5 5 4 9" />
+            <path d="M24 11V6M19 13l-3-4M29 13l3-4" />
+          </svg>
+        </span>
+        <span>Vendég Chef</span>
+      </a>
+      <nav aria-label="Fő navigáció">
+        <a href="#miert">A koncepció</a>
+        <a class="header-cta" href="#igenyfelmeres">Mondd el, mit ennél</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Heti egy ebéd · kompromisszumok nélkül</p>
+          <h1 id="hero-title">Ebéd, aminek minden összetevője számít.</h1>
+          <p class="hero-lead">
+            Valódi alapanyagok. Organikus, amikor csak lehet. Semmi előre feldolgozott,
+            semmi felesleges adalék — csak egészséges, izgalmas fogások, pontosan számolt
+            kalóriával és tápértékkel.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#igenyfelmeres">Segítek megtervezni</a>
+            <span class="time-note">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5" /><path d="M10 5.5V10l3 2" /></svg>
+              5 perces igényfelmérés
+            </span>
+          </div>
+        </div>
+
+        <div class="lunch-visual" aria-label="Egy színes, kiegyensúlyozott ebéd illusztrációja">
+          <div class="menu-card">
+            <span class="menu-tag">01 / első menü</span>
+            <div class="meal-box" aria-hidden="true">
+              <span class="food food-grain"></span>
+              <span class="food food-greens"></span>
+              <span class="food food-protein"></span>
+              <span class="food food-root"></span>
+              <span class="food food-herb"></span>
+            </div>
+            <div class="nutrition-strip">
+              <span><strong>620</strong> kcal</span>
+              <span><strong>32 g</strong> fehérje</span>
+              <span><strong>18 g</strong> rost</span>
+            </div>
+            <p>Nem csak finomnak tervezzük. Neked tervezzük.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="principles" id="miert" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="eyebrow">Miben hiszünk</p>
+          <h2 id="principles-title">A jó ebéd nem rövidítés.</h2>
+        </div>
+        <div class="principle-grid">
+          <article>
+            <span class="principle-number">01</span>
+            <h3>Ismerhető alapanyagok</h3>
+            <p>Friss, szezonális és lehetőség szerint organikus hozzávalók. Adalékok és tartósítószerek nélkül.</p>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <h3>Jóleső egyensúly</h3>
+            <p>Egészséges nem egyenlő unalmassal. Minden menü ízre és tápértékre is tudatosan épül fel.</p>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <h3>Pontosan, átláthatóan</h3>
+            <p>Részletes tápérték- és kalóriainformáció minden fogáshoz, hogy tudd, mi kerül a tányérodra.</p>
+          </article>
+        </div>
+        <div class="weekly-note">
+          <span>Induláskor heti egyszer</span>
+          <p>Egyetlen, átgondolt menüvel kezdünk. Az igényeitek alapján.</p>
+        </div>
+      </section>
+
+      <section class="survey-section" id="igenyfelmeres" aria-labelledby="survey-title">
+        <aside class="survey-intro">
+          <p class="eyebrow">Alakítsd velünk</p>
+          <h2 id="survey-title">Milyen lenne a te ideális ebéded?</h2>
+          <p>
+            Ez még nem rendelés. A válaszaidból tervezzük meg az első menüket, az árakat
+            és az átvétel vagy kiszállítás módját.
+          </p>
+          <ol class="survey-steps">
+            <li><span>01</span> Rólad és az igényeidről</li>
+            <li><span>02</span> Ízek és étkezési szempontok</li>
+            <li><span>03</span> Mi számít igazán?</li>
+            <li><span>04</span> Ötletek és kapcsolattartás</li>
+          </ol>
+          <p class="privacy-note">A válaszaidat kizárólag a szolgáltatás megtervezéséhez használjuk.</p>
+        </aside>
+
+        <div class="form-card">
+          <form id="interest-form">
+            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+
+            <fieldset>
+              <legend><span>01</span> Rólad és az igényeidről</legend>
+              <div class="field-grid">
+                <label class="field">
+                  <span>Név</span>
+                  <input name="name" type="text" autocomplete="name" maxlength="100" placeholder="Hogy szólíthatunk?" />
+                </label>
+                <label class="field">
+                  <span>Település vagy budapesti kerület <strong>*</strong></span>
+                  <input name="location" type="text" autocomplete="address-level2" required maxlength="100" placeholder="Pl. Szentendre vagy XI. kerület" />
+                </label>
+                <label class="field">
+                  <span>Hány főre rendelnél? <strong>*</strong></span>
+                  <input name="peopleCount" type="number" required min="1" max="12" inputmode="numeric" placeholder="2" />
+                </label>
+                <label class="field">
+                  <span>Milyen gyakran rendelnél? <strong>*</strong></span>
+                  <select name="orderFrequency" required>
+                    <option value="">Válassz egyet</option>
+                    <option>Hetente</option>
+                    <option>Havonta 2–3 alkalommal</option>
+                    <option>Havonta egyszer</option>
+                    <option>Alkalmanként</option>
+                    <option>Először kipróbálnám</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field choice-field">
+                <span>Preferált adagméret <strong>*</strong></span>
+                <div class="option-cards three-up">
+                  <label>
+                    <input type="radio" name="portionSize" value="Kisebb" required />
+                    <span><strong>Kisebb</strong><small>Könnyű ebéd</small></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="portionSize" value="Normál" />
+                    <span><strong>Normál</strong><small>Kiegyensúlyozott</small></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="portionSize" value="Nagy" />
+                    <span><strong>Nagy</strong><small>Bőséges adag</small></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field choice-field">
+                <span>Mennyit szánnál egy teljes ebédre, személyenként? <strong>*</strong></span>
+                <div class="option-cards price-options">
+                  <label><input type="radio" name="priceBracket" value="2 500–3 490 Ft" required /><span><strong>2 500–3 490 Ft</strong></span></label>
+                  <label><input type="radio" name="priceBracket" value="3 500–4 490 Ft" /><span><strong>3 500–4 490 Ft</strong></span></label>
+                  <label><input type="radio" name="priceBracket" value="4 500–5 490 Ft" /><span><strong>4 500–5 490 Ft</strong></span></label>
+                  <label><input type="radio" name="priceBracket" value="5 500 Ft felett" /><span><strong>5 500 Ft felett</strong></span></label>
+                  <label><input type="radio" name="priceBracket" value="Még nem tudom" /><span><strong>Még nem tudom</strong></span></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span>02</span> Ízek és étkezési szempontok</legend>
+              <div class="field cuisine-field">
+                <span>Milyen konyhák érdekelnek? <strong>*</strong></span>
+                <small>Többet is választhatsz.</small>
+                <div class="pill-grid" id="cuisine-options">
+                  <label><input type="checkbox" name="cuisines" value="Modern magyar" /><span>Modern magyar</span></label>
+                  <label><input type="checkbox" name="cuisines" value="Mediterrán" /><span>Mediterrán</span></label>
+                  <label><input type="checkbox" name="cuisines" value="Ázsiai" /><span>Ázsiai</span></label>
+                  <label><input type="checkbox" name="cuisines" value="Közel-keleti" /><span>Közel-keleti</span></label>
+                  <label><input type="checkbox" name="cuisines" value="Növényi" /><span>Növényi</span></label>
+                  <label><input type="checkbox" name="cuisines" value="Klasszikus comfort food" /><span>Comfort food</span></label>
+                  <label><input type="checkbox" name="cuisines" value="Fúziós és kísérleti" /><span>Fúziós &amp; kísérleti</span></label>
+                </div>
+                <small class="field-error" id="cuisine-error">Válassz legalább egy kategóriát.</small>
+              </div>
+
+              <div class="field-grid textarea-grid">
+                <label class="field">
+                  <span>Nem kedvelt ételek vagy alapanyagok</span>
+                  <textarea name="dislikedFoods" maxlength="600" rows="4" placeholder="Pl. belsőségek, kapor, gomba…"></textarea>
+                </label>
+                <label class="field">
+                  <span>Allergiák vagy intoleranciák</span>
+                  <textarea name="allergies" maxlength="600" rows="4" placeholder="Pl. glutén, laktóz, diófélék…"></textarea>
+                </label>
+              </div>
+
+              <div class="range-card spice-card">
+                <div class="range-copy">
+                  <label for="spice-tolerance">Mennyire szereted a csípőset? <strong>*</strong></label>
+                  <output for="spice-tolerance" data-output="spice-tolerance">Közepesen</output>
+                </div>
+                <input id="spice-tolerance" name="spiceTolerance" type="range" min="1" max="5" value="3" step="1" />
+                <div class="range-axis"><span>Egyáltalán nem</span><span>Nagyon csípősen</span></div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span>03</span> Mi számít igazán?</legend>
+              <p class="fieldset-intro">
+                Mozgasd a csúszkákat aszerint, mennyire fontosak neked az alábbi szempontok.
+                Nincs jó vagy rossz válasz.
+              </p>
+              <div class="importance-chart">
+                <div class="chart-axis" aria-hidden="true"><span>Nem számít</span><span>Kiemelten fontos</span></div>
+
+                <div class="importance-row">
+                  <div><label for="importance-ingredients">Alapanyagok minősége</label><small>Friss, organikus, szezonális</small></div>
+                  <div class="slider-wrap"><input id="importance-ingredients" name="importanceIngredients" type="range" min="1" max="5" value="4" step="1" /><output for="importance-ingredients" data-output="importance-ingredients">Fontos</output></div>
+                </div>
+                <div class="importance-row">
+                  <div><label for="importance-nutrition">Egészséges tápanyagegyensúly</label><small>Fehérje, rost, szénhidrát és zsír aránya</small></div>
+                  <div class="slider-wrap"><input id="importance-nutrition" name="importanceNutrition" type="range" min="1" max="5" value="4" step="1" /><output for="importance-nutrition" data-output="importance-nutrition">Fontos</output></div>
+                </div>
+                <div class="importance-row">
+                  <div><label for="importance-packaging">Csomagolás minősége</label><small>Praktikus, igényes, környezettudatos</small></div>
+                  <div class="slider-wrap"><input id="importance-packaging" name="importancePackaging" type="range" min="1" max="5" value="3" step="1" /><output for="importance-packaging" data-output="importance-packaging">Jó, ha van</output></div>
+                </div>
+                <div class="importance-row">
+                  <div><label for="importance-kit">Otthon befejezhető „kit box”</label><small>Pár perces befejezés, frissen tálalva</small></div>
+                  <div class="slider-wrap"><input id="importance-kit" name="importanceKit" type="range" min="1" max="5" value="3" step="1" /><output for="importance-kit" data-output="importance-kit">Jó, ha van</output></div>
+                </div>
+                <div class="importance-row">
+                  <div><label for="importance-diversity">Fogások változatossága</label><small>Új ízek és rendszeresen változó menü</small></div>
+                  <div class="slider-wrap"><input id="importance-diversity" name="importanceDiversity" type="range" min="1" max="5" value="4" step="1" /><output for="importance-diversity" data-output="importance-diversity">Fontos</output></div>
+                </div>
+                <div class="importance-row">
+                  <div><label for="importance-price">Ár</label><small>Minél kedvezőbb ár-érték arány</small></div>
+                  <div class="slider-wrap"><input id="importance-price" name="importancePrice" type="range" min="1" max="5" value="3" step="1" /><output for="importance-price" data-output="importance-price">Jó, ha van</output></div>
+                </div>
+                <div class="importance-row">
+                  <div><label for="importance-convenience">Kiszállítás ideje / átvételi pont távolsága</label><small>Mennyire legyen kényelmesen elérhető</small></div>
+                  <div class="slider-wrap"><input id="importance-convenience" name="importanceConvenience" type="range" min="1" max="5" value="4" step="1" /><output for="importance-convenience" data-output="importance-convenience">Fontos</output></div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="final-fieldset">
+              <legend><span>04</span> Ötletek és kapcsolattartás</legend>
+              <label class="field">
+                <span>Van még ötleted vagy kérésed?</span>
+                <textarea name="ideas" maxlength="1200" rows="5" placeholder="Egy fogás, egy működési ötlet, egy fontos részlet — minden érdekel."></textarea>
+                <small><span id="ideas-count">0</span>/1200 karakter</small>
+              </label>
+              <label class="field">
+                <span>E-mail cím <strong>*</strong></span>
+                <input name="email" type="email" autocomplete="email" required maxlength="160" placeholder="email@pelda.hu" />
+                <small>Ide írunk, amikor indul az első menü.</small>
+              </label>
+              <label class="consent">
+                <input name="consent" type="checkbox" required />
+                <span>Hozzájárulok, hogy a Vendég Chef a válaszaimat az igényfelméréshez felhasználja, és az indulásról e-mailben értesítsen. <strong>*</strong></span>
+              </label>
+              <label class="honeypot" aria-hidden="true"><span>Weboldal</span><input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+              <button class="button button-submit" type="submit">
+                <span>Válaszok elküldése</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+              </button>
+              <p class="submit-note">A csillaggal jelölt mezők kitöltése kötelező.</p>
+            </fieldset>
+          </form>
+
+          <section class="success-card" id="success-card" hidden aria-live="polite">
+            <span class="success-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m8 16 5 5 11-11" /></svg></span>
+            <p class="eyebrow">Köszönjük</p>
+            <h2>Ezzel máris közelebb került az első menü.</h2>
+            <p id="success-message">Jelentkezünk, amint kóstolható a Vendég Chef első ebédje.</p>
+            <button class="button button-secondary" id="new-submission" type="button">Új válasz küldése</button>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">Vendég Chef</a>
+      <p>Valódi étel. Pontosan neked.</p>
+      <p>© <span id="year"></span> Vendég Chef</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+name = "vendegchef-airtable-relay"
+main = "src/index.js"
+compatibility_date = "2026-07-14"
+account_id = "f65a7c25211a0516f450cbffb187d5f3"
+workers_dev = true
+preview_urls = false
+
+[vars]
+ALLOWED_ORIGIN = "https://ananaszjoe.github.io"
+AIRTABLE_BASE_ID = "appxDcaBjWZrzhO1G"
+AIRTABLE_TABLE_ID = "tblhbyuGJEzW3nFCv"
