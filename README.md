@@ -12,7 +12,7 @@ Then open <http://localhost:4173>.
 
 ## Publish on Netlify
 
-The repository is linked to the `vendegchef` Netlify project. The production URL is <https://vendegchef.netlify.app>.
+The repository is linked to the `vendegchef` Netlify project. The production URL is <https://vendegchef.hu>, with <https://vendegchef.netlify.app> kept as the Netlify fallback URL.
 
 To create a production deployment from the linked local project:
 

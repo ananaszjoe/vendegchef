@@ -3,15 +3,15 @@ const MAX_BODY_BYTES = 30_000;
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin") || "";
-    const allowedOrigin = env.ALLOWED_ORIGIN || "";
-    const corsHeaders = buildCorsHeaders(origin, allowedOrigin);
+    const allowedOrigins = parseAllowedOrigins(env.ALLOWED_ORIGINS || env.ALLOWED_ORIGIN || "");
+    const corsHeaders = buildCorsHeaders(origin, allowedOrigins);
 
     if (request.method === "OPTIONS") {
-      return new Response(null, { status: originAllowed(origin, allowedOrigin) ? 204 : 403, headers: corsHeaders });
+      return new Response(null, { status: originAllowed(origin, allowedOrigins) ? 204 : 403, headers: corsHeaders });
     }
 
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405, corsHeaders);
-    if (!originAllowed(origin, allowedOrigin)) return json({ error: "Origin not allowed" }, 403, corsHeaders);
+    if (!originAllowed(origin, allowedOrigins)) return json({ error: "Origin not allowed" }, 403, corsHeaders);
 
     const contentLength = Number(request.headers.get("content-length") || 0);
     if (contentLength > MAX_BODY_BYTES) return json({ error: "Request too large" }, 413, corsHeaders);
@@ -91,13 +91,23 @@ function toAirtableFields(value) {
   };
 }
 
-function originAllowed(origin, allowedOrigin) {
-  return Boolean(origin && allowedOrigin && origin === allowedOrigin);
+function parseAllowedOrigins(value) {
+  return new Set(
+    String(value)
+      .split(",")
+      .map((origin) => origin.trim())
+      .filter(Boolean),
+  );
 }
 
-function buildCorsHeaders(origin, allowedOrigin) {
+function originAllowed(origin, allowedOrigins) {
+  return Boolean(origin && allowedOrigins.has(origin));
+}
+
+function buildCorsHeaders(origin, allowedOrigins) {
+  const allowed = originAllowed(origin, allowedOrigins);
   return {
-    "Access-Control-Allow-Origin": originAllowed(origin, allowedOrigin) ? origin : allowedOrigin,
+    ...(allowed ? { "Access-Control-Allow-Origin": origin } : {}),
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     Vary: "Origin",
